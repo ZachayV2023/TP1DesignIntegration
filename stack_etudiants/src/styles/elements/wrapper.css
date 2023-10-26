@@ -1,14 +1,12 @@
 /* ==========================================================================
    WRAPPER / ELEMENT
    ========================================================================== */
-
 .wrapper {
-    $breakpoint-lger: 1200px;
-    max-width: $breakpoint-lger;
-    width: calc(100% - var(--spacing-md));
-    margin: 0 auto;
+  max-width: 1200px;
+  width: calc(100% - var(--spacing-md));
+  margin: 0 auto;
 }
 
 .header {
-    background-color: var(--color-bg-primary);
-}
+  background-color: var(--color-bg-primary);
+}/*# sourceMappingURL=wrapper.css.map */
