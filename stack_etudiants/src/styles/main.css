@@ -779,10 +779,23 @@ a:hover {
 .section_1 .wrapper {
   margin-left: 200px;
 }
+.section_1 .wrapper .title_wrapper {
+  text-align: center;
+  margin-bottom: 20px; /* Adjusted spacing */
+}
+.section_1 .wrapper .title_wrapper h1 {
+  font-size: 59px;
+  margin-bottom: 10px; /* Adjusted spacing */
+  color: white;
+}
+.section_1 .wrapper .title_wrapper h2 {
+  font-size: 30px;
+  color: white;
+}
 .section_1 .wrapper .section_content {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-right: -400px;
+  margin-right: 300px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -790,56 +803,53 @@ a:hover {
 .section_1 .wrapper .section_content .left_column .icon_logo_principale {
   width: 700px;
   height: 500px;
+  margin-bottom: 20px; /* Adjusted spacing */
 }
 .section_1 .wrapper .section_content .right_column {
   flex: 1;
   padding-left: 30px;
 }
-.section_1 .wrapper .section_content .right_column .large_line {
+.section_1 .wrapper .section_content .right_column .top_line {
   width: 100%;
   height: 5px;
   background-color: white;
+  margin-bottom: 20px; /* Adjusted spacing */
 }
 .section_1 .wrapper .section_content .right_column .columns {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjusted spacing */
 }
-.section_1 .wrapper .section_content .right_column .columns div {
+.section_1 .wrapper .section_content .right_column .columns .column_left, .section_1 .wrapper .section_content .right_column .columns .column_right {
   flex: 1;
   padding: 0 10px;
+  margin-right: 20px;
 }
-.section_1 .wrapper .section_content .right_column .columns h1 {
+.section_1 .wrapper .section_content .right_column .columns .column_right {
+  margin-right: 0;
+}
+.section_1 .wrapper .section_content .right_column .columns h3, .section_1 .wrapper .section_content .right_column .columns h4 {
+  margin: 0;
+  margin-bottom: 10px; /* Adjusted spacing */
   color: white;
 }
-.section_1 .wrapper .section_content .right_column .columns .prix {
-  color: turquoise;
+.section_1 .wrapper .section_content .right_column .columns .prix, .section_1 .wrapper .section_content .right_column .columns .contributors {
+  color: #57F0F8;
 }
-.section_1 .wrapper .section_content .right_column .columns h1.prix,
-.section_1 .wrapper .section_content .right_column .columns h3 {
-  color: white;
+.section_1 .wrapper .section_content .right_column .section_media {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adjusted spacing */
 }
-.section_1 .wrapper .section_content .right_column .columns h1.prix {
-  font-size: 2em;
-}
-.section_1 .wrapper .section_content .right_column .columns h3 {
-  font-size: 1.5em;
-  margin: 10px 0;
-}
-.section_1 .wrapper .section_content .right_column button {
+.section_1 .wrapper .section_content .right_column .section_media button {
   background-color: transparent;
   color: #57F0F8;
   font-size: var(--font-size-bouton);
   padding: var(--spacing-sm);
   border: 2px solid #57F0F8;
   margin-top: 20px;
-}
-.section_1 .wrapper .section_content .right_column .section_media {
-  display: flex;
-  align-items: center;
-}
-.section_1 .wrapper .section_content .right_column .section_media .button_color {
-  color: white;
+  margin-right: 20px; /* Adjusted spacing */
 }
 .section_1 .wrapper .section_content .right_column .section_media img {
   width: 50px;
@@ -862,80 +872,92 @@ a:hover {
 .section_2 {
   border: 40px solid white;
   background-color: #242424;
-  position: relative; /* Add relative positioning to the section */
+  position: relative;
   overflow: hidden;
 }
-.section_2 .image_background {
+.section_2 .image_background_wrapper {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  border: 60px solid #242424;
+}
+.section_2 .image_background {
+  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .section_2 .mini_header {
-  position: relative; /* Add relative positioning to the menu */
-  z-index: 2; /* Ensure the menu is above the background image */
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-size: 3.5em;
   padding: var(--spacing-sm);
-  background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Add a slight blur to the background */
+  background-color: white;
   border: 8px solid #242424;
   gap: 1em;
 }
 .section_2 .wrapper {
-  margin-top: 800px;
-  position: relative; /* Add relative positioning to the wrapper */
-  z-index: 2; /* Ensure the cards are above the background image */
+  position: relative;
+  z-index: 2;
 }
 .section_2 .cards {
   display: flex;
   justify-content: space-between;
-  padding: 20px; /* Add padding for spacing */
+  padding: 20px;
 }
 .section_2 .card {
-  flex: 1;
-  background-color: #242424; /* Add background color for the cards */
-  padding: 20px; /* Add padding for spacing */
+  height: 600px;
+  width: 600px;
+  background-color: #242424;
+  padding: 20px;
   display: flex;
-  flex-direction: column; /* Stack the content vertically */
-  justify-content: center; /* Center the content vertically */
-  align-items: flex-start; /* Align the content to the left */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .section_2 .big_black_box {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  position: relative;
   color: white;
-  text-align: center; /* Center-align text */
+  text-align: center;
+  width: 500px;
 }
 .section_2 .big_black_box h3 {
-  font-size: 2em;
+  font-size: 3em;
+  margin-bottom: 30px;
 }
 .section_2 .big_black_box ul {
   list-style: none;
   padding: 0;
+  text-align: left;
 }
 .section_2 .big_black_box ul li {
+  display: flex;
+  align-items: center;
   font-size: 1.5em;
   margin: 10px 0;
+  font-size: 2em;
+}
+.section_2 .big_black_box ul li .bullet {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 /* ==========================================================================
    COMPONENTS/SECTOR3.SCSS
    ========================================================================== */
 .section_3 {
+  height: 130vh;
   border: 40px solid white;
   background-color: #242424;
   padding: 20px;
-  height: 100vh;
 }
 .section_3 .wrapper {
   width: 100%;
@@ -948,49 +970,47 @@ a:hover {
   justify-content: center;
 }
 .section_3 .wrapper .cards {
-  margin-left: 660px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 1500px;
-  flex-shrink: 0;
-  height: calc(100% - var(--font-size-h2));
-  width: 1850px;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 20px;
+  margin-left: 600px;
 }
 .section_3 .wrapper .cards .card {
-  width: 1000px;
+  transform: scale(1.5);
+  flex: 1;
+  max-width: calc(33.3333333333% - 40px);
   background-color: #ffffff;
-  margin: 20px;
+  margin: 100px;
   padding: var(--spacing-md);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
 .section_3 .wrapper .cards .card .card_header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   margin-bottom: 100px;
   font-size: 3em;
+  text-align: center;
 }
 .section_3 .wrapper .cards .card ul {
   background-color: #242424;
-  width: 270px;
-  height: 330px;
-  margin-bottom: 90px;
+  width: 100%;
+  padding: 20px;
   color: #ffffff;
-  padding: var(--spacing-xs);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transform: scale(2);
+  align-items: flex-start;
+  justify-content: center;
+  transform: scale(1);
 }
 .section_3 .wrapper .cards .card ul li {
-  margin-bottom: var(--spacing-xs);
+  list-style-type: none;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 /* ==========================================================================

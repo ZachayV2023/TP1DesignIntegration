@@ -273,104 +273,117 @@ $image-path: "src/assets/images";
     border: 40px solid white;
     background-color: $gris-foncer;
     padding: 20px;
-  
+
     .wrapper {
-      margin-left: 200px;
-      .section_content {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-right: -400px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-  
-        .left_column {
-          .icon_logo_principale {
-            width: 700px;
-            height: 500px;
-          }
+        margin-left: 200px;
+
+        .title_wrapper {
+            text-align: center;
+            margin-bottom: 20px;  /* Adjusted spacing */
+
+            h1 {
+                font-size: 59px;
+                margin-bottom: 10px;  /* Adjusted spacing */
+                color: white;
+            }
+
+            h2 {
+                font-size: 30px;
+                color: white;
+            }
         }
-  
-        .right_column {
-          flex: 1;
-          padding-left: 30px;
-  
-          .large_line {
-            width: 100%;
-            height: 5px;
-            background-color: white;
-          }
-  
-          .columns {
+
+        .section_content {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-right: 300px;
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
-  
-            div {
-              flex: 1;
-              padding: 0 10px;
-            }
-
-            h1{
-              color: white;
-            }
-
-            .prix{
-              color: turquoise;
-            }
-  
-            h1.prix,
-            h3 {
-              color: white;
-            }
-  
-            h1.prix {
-              font-size: 2em;
-            }
-  
-            h3 {
-              font-size: 1.5em;
-              margin: 10px 0;
-            }
-          }
-  
-          button {
-            background-color: transparent;
-            color: $turquoise;
-            font-size: var(--font-size-bouton);
-            padding: var(--spacing-sm);
-            border: 2px solid $turquoise;
-            margin-top: 20px;
-          }
-  
-          .section_media {
-            display: flex;
             align-items: center;
 
-            .button_color{
-              color:white;
+            .left_column {
+                .icon_logo_principale {
+                    width: 700px;
+                    height: 500px;
+                    margin-bottom: 20px;  /* Adjusted spacing */
+                }
             }
-  
-            img {
-              width: 50px;
-              height: 50px;
-              margin-right: 10px;
-              object-fit: cover;
+
+            .right_column {
+                flex: 1;
+                padding-left: 30px;
+
+                .top_line {
+                    width: 100%;
+                    height: 5px;
+                    background-color: white;
+                    margin-bottom: 20px;  /* Adjusted spacing */
+                }
+
+                .columns {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    margin-bottom: 20px;  /* Adjusted spacing */
+
+                    .column_left, .column_right {
+                        flex: 1;
+                        padding: 0 10px;
+                        margin-right: 20px;
+                    }
+
+                    .column_right {
+                        margin-right: 0;
+                    }
+
+                    h3, h4 {
+                        margin: 0;
+                        margin-bottom: 10px;  /* Adjusted spacing */
+                        color: white;
+                    }
+
+                    .prix, .contributors {
+                        color: $turquoise;
+                    }
+                }
+
+                .section_media {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;  /* Adjusted spacing */
+
+                    button {
+                        background-color: transparent;
+                        color: $turquoise;
+                        font-size: var(--font-size-bouton);
+                        padding: var(--spacing-sm);
+                        border: 2px solid $turquoise;
+                        margin-top: 20px;
+                        margin-right: 20px;  /* Adjusted spacing */
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 10px;
+                        object-fit: cover;
+                    }
+                }
+
+                .content_below_columns {
+                    text-align: center;
+
+                    .custom-h3 {
+                        color: white;
+                        font-size: 19px;
+                    }
+                }
             }
-          }
-  
-          .content_below_columns {
-            text-align: center;
-  
-            .custom-h3 {
-              color:white;
-              font-size: 19px;
-            }
-          }
         }
-      }
     }
-  }
+}
+
+
 /* ==========================================================================
    COMPONENTS/SECTOR2.SCSS
    ========================================================================== */
@@ -378,78 +391,94 @@ $image-path: "src/assets/images";
    .section_2 {
     border: 40px solid white;
     background-color: $gris-foncer;
-    position: relative; /* Add relative positioning to the section */
+    position: relative;
     overflow: hidden;
   
-    .image_background {
+    .image_background_wrapper {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      border: 60px solid $gris-foncer;
+    }
+  
+    .image_background {
+      position: relative;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   
     .mini_header {
-      position: relative; /* Add relative positioning to the menu */
-      z-index: 2; /* Ensure the menu is above the background image */
+      position: relative;
+      z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
       color: black;
       font-size: 3.5em;
       padding: var(--spacing-sm);
-      background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
-      backdrop-filter: blur(10px); /* Add a slight blur to the background */
+      background-color: white;
       border: 8px solid $gris-foncer;
       gap: 1em;
     }
   
     .wrapper {
-      margin-top: 800px;
-      position: relative; /* Add relative positioning to the wrapper */
-      z-index: 2; /* Ensure the cards are above the background image */
+      position: relative;
+      z-index: 2;
     }
   
     .cards {
       display: flex;
       justify-content: space-between;
-      padding: 20px; /* Add padding for spacing */
+      padding: 20px;
     }
   
     .card {
-      flex: 1;
-      background-color: $gris-foncer; /* Add background color for the cards */
-      padding: 20px; /* Add padding for spacing */
+      height: 600px;
+      width: 600px;
+      background-color: $gris-foncer;
+      padding: 20px;
       display: flex;
-      flex-direction: column; /* Stack the content vertically */
-      justify-content: center; /* Center the content vertically */
-      align-items: flex-start; /* Align the content to the left */
+      flex-direction: column;
+      justify-content: center; // Center vertically
+      align-items: center;     // Center horizontally
     }
-  
+    
     .big_black_box {
-      position: absolute;
-      top: 50%; /* Center vertically */
-      left: 50%; /* Center horizontally */
-      transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+      position: relative;  
       color: white;
-      text-align: center; /* Center-align text */
-      
+      text-align: center;
+      width: 500px;  // 1/3 larger than 400px
+    
       h3 {
-        font-size: 2em;
+        font-size: 3em;
+        margin-bottom:30px;
       }
-      
+    
       ul {
         list-style: none;
         padding: 0;
-        
+        text-align: left;
+    
         li {
+          display: flex;
+          align-items: center;
           font-size: 1.5em;
           margin: 10px 0;
+          font-size: 2em;
+    
+          .bullet {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+          }
         }
       }
     }
   }
+  
   
   
 
@@ -458,71 +487,72 @@ $image-path: "src/assets/images";
    ========================================================================== */
 
    .section_3 {
+    height: 130vh;
     border: 40px solid white;
     background-color: $gris-foncer;
     padding: 20px;
-    height: 100vh;
   
     .wrapper {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  
-      .cards {
-        margin-left: 660px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
-        width: 1500px;
-        flex-shrink: 0;
-        height: calc(100% - var(--font-size-h2));
-        width: calc(1850px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
   
-        .card {
-          width: 1000px;
-          background-color: $blanc;
-          margin: 20px;
-          padding: var(--spacing-md);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          
-          .card_header {
+        .cards {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-around;
             width: 100%;
-            margin-bottom: 100px;
-            font-size: 3em;
-          }
+            padding: 0 20px;
+            margin-left: 600px;
+            
   
-          ul {
-            background-color: $gris-foncer;
-            width: 270px;
-            height: 330px;
-            margin-bottom:90px;
-            color: $blanc;
-            padding: var(--spacing-xs);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transform: scale(2);  
-            li {
-              margin-bottom: var(--spacing-xs);
+            .card {
+                transform: scale(1.5);
+                flex: 1;
+                max-width: calc((100% / 3) - 40px);
+                background-color: $blanc;
+                margin: 100px;
+                padding: var(--spacing-md);
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                .card_header {
+                    width: 100%;
+                    margin-bottom: 100px;
+                    font-size: 3em;
+                    text-align: center;
+                }
+  
+                ul {
+                    background-color: $gris-foncer;
+                    width: 100%;
+                    padding: 20px;
+                    color: $blanc;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    transform: scale(1);
+  
+                    li {
+                        list-style-type: none;
+                        font-size: 1.8em;
+                        margin-bottom: 20px;
+                        text-align: left;
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
+}
+
   
 /* ==========================================================================
    COMPONENTS/FOOTER.SCSS
