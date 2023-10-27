@@ -1,0 +1,60 @@
+/* ==========================================================================
+   COMPONENTS/FOOTER.SCSS
+   ========================================================================== */
+   // Colors
+$blanc: #ffffff;
+$turquoise: #57f0f8;
+$gris-foncer: #242424;
+   footer .footer_section h4 {
+    font-size: var(--font-size-sous-titre);
+    }
+    
+    footer .footer_section ul li,
+    .footer_copyright {
+    font-size: var(--font-size-out);
+    }
+    
+    footer {
+      background-color: $gris-foncer;
+      height: 367px;
+      position: relative;
+    
+      .footer_wrapper {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    
+        .footer_section {
+          flex: 1;
+          color: $blanc;
+          margin-left: 100px;
+          margin-top: 50px;
+    
+          h4 {
+            font-size: var(--font-size-sous-titre);
+            margin-bottom: 10px;
+          }
+    
+          ul {
+            list-style: none;
+            padding-left: 0;
+    
+            li {
+              margin-bottom: 5px;
+              font-size: var(--font-size-out);
+            }
+          }
+        }
+      }
+    
+      .footer_copyright {
+        color: $blanc;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        font-size: var(--font-size-out);
+      }
+    }
+    

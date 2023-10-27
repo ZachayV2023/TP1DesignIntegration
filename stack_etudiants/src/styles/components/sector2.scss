@@ -1,0 +1,105 @@
+/* ==========================================================================
+   COMPONENTS/SECTOR2.SCSS
+   ========================================================================== */
+// Colors
+$blanc: #ffffff;
+$turquoise: #57f0f8;
+$gris-foncer: #242424;
+   .section_2 .mini_header {
+    font-size: var(--font-size-h1-1); // or appropriate variable
+  }
+  
+  .section_2 .big_black_box h3 {
+    font-size: var(--font-size-h3); // or appropriate variable
+  }
+  
+  .section_2 {
+    border: 40px solid white;
+    background-color: $gris-foncer;
+    position: relative;
+    overflow: hidden;
+  
+    .image_background_wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 60px solid $gris-foncer;
+    }
+  
+    .image_background {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .mini_header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-size: 3.5em;
+      padding: var(--spacing-sm);
+      background-color: white;
+      border: 8px solid $gris-foncer;
+      gap: 1em;
+    }
+  
+    .wrapper {
+      position: relative;
+      z-index: 2;
+    }
+  
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+  
+    .card {
+      height: 600px;
+      width: 600px;
+      background-color: $gris-foncer;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; // Center vertically
+      align-items: center; // Center horizontally
+    }
+  
+    .big_black_box {
+      position: relative;
+      color: white;
+      text-align: center;
+      width: 500px; // 1/3 larger than 400px
+  
+      h3 {
+        font-size: 3em;
+        margin-bottom: 30px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+  
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 1.5em;
+          margin: 10px 0;
+          font-size: 2em;
+  
+          .bullet {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,155 @@
+/* ==========================================================================
+   COMPONENTS/SECTOR1.SCSS
+   ========================================================================== */
+
+   // Colors
+$blanc: #ffffff;
+$turquoise: #57f0f8;
+$gris-foncer: #242424;
+// Base styling for the section
+.section_1 {
+    border: 40px solid white;
+    background-color: $gris-foncer;
+    padding: 20px;
+  
+    .wrapper {
+      margin-left: 200px;
+    }
+  }
+  
+  .section_1 .title_wrapper h1 {
+    font-size: var(--font-size-grand-titre);
+  }
+  
+  .section_1 .title_wrapper h2 {
+    font-size: var(--font-size-sous-titre);
+  }
+  
+  // Title styling
+  .section_1 .title_wrapper {
+    text-align: center;
+    margin-bottom: 50px;
+  
+    h1,
+    h2 {
+      color: white;
+      margin: 0;
+    }
+  
+    h1 {
+      margin-top: 60px;
+      font-size: 59px;
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 30px;
+    }
+  }
+  
+  // Content styling
+  .section_1 .section_content {
+    margin: 50px 300px 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  // Left column styling
+  .section_1 .left_column .icon_logo_principale {
+    width: 700px;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  
+  // Right column styling
+  .section_1 .right_column {
+    flex: 1;
+    padding-left: 30px;
+  }
+  
+  // Additional nested styling for the right column
+  .section_1 .right_column {
+    .top_line,
+    .columns,
+    .section_media,
+    .content_below_columns {
+      margin-bottom: 20px;
+    }
+  
+    .top_line {
+      width: 100%;
+      height: 5px;
+      background-color: white;
+    }
+  
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+  
+      .column_left,
+      .column_right {
+        flex: 1;
+        padding: 0 10px;
+        margin-right: 20px;
+      }
+  
+      .column_right {
+        margin-right: 0;
+      }
+  
+      h3,
+      h4 {
+        margin: 0 0 10px 0;
+        color: white;
+      }
+  
+      .prix{
+        font-size: 46px;
+        color: $turquoise;
+      }
+      .contributors {
+        font-size:28px;
+        color: $turquoise;
+      }
+    }
+  
+    .section_media {
+      display: flex;
+      align-items: center;
+  
+      button {
+        background-color: transparent;
+        color: white;
+        font-size: calc(var(--font-size-bouton) * 0.8);
+        padding: calc(var(--spacing-sm) * 0.8);
+        border: 2px solid $turquoise;
+        margin-top: 20px;
+        margin-right: 150px;
+      }
+  
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        object-fit: cover;
+      }
+    }
+  
+    .content_below_columns {
+      text-align: center;
+      .custom-h3 {
+        margin-top: 100px;
+        color: white;
+        font-size: 19px; // Already existing rule for 19px
+      }
+    }
+  
+    // Add this new code here
+    .column_right h4,
+    .content_below_columns .custom-h3 {
+      font-size: var(--font-size-h3);
+    }
+  }
+  

@@ -11,3 +11,22 @@
     overflow-x: hidden;
     background-color: white;
   }
+  $image-path: "src/assets/images";
+
+/* ==========================================================================
+   IMAGES
+   ========================================================================== */
+
+   $image-path: "src/assets/images";
+
+   .image_2 {
+     background-image: url(#{$image-path}/image\ 2.png);
+     width: auto; // Replace 'auto' with the desired width
+     height: auto; // Replace 'auto' with the desired height
+   }
+   
+   .mask_group {
+     background-image: url(#{$image-path}/Mask\ group.png);
+     width: auto; // Replace 'auto' with the desired width
+     height: auto; // Replace 'auto' with the desired height
+   }

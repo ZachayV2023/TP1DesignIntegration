@@ -1,0 +1,97 @@
+// Define frequently used variables
+// Colors
+$blanc: #ffffff;
+$turquoise: #57f0f8;
+$gris-foncer: #242424;
+$dark-gray: $gris-foncer;
+$white: $blanc;
+
+// Define mixin for flex centering
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Define mixin for hover underline
+@mixin hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header {
+  background-color: $dark-gray;
+  padding: 0;
+  height: 224px;
+  @include flex-center;
+
+  .wrapper {
+    margin-left: 120px;
+    width: 100%;
+    @include flex-center;
+    justify-content: space-between; // Override mixin for specific behavior
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @include flex-center;
+
+      li {
+        margin: 0 100px;
+
+        a {
+          text-decoration: none;
+          @include hover-underline;
+
+          &.button {
+            padding: 10px 20px;
+            border: none;
+            color: $white;
+            font-size: var(--font-size-bouton);
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  .header__brand {
+    position: relative;
+    @include flex-center;
+
+    .img_main {
+      height: auto !important;
+      width: 300px !important;
+      margin: 0 10px;
+    }
+
+    .line {
+      height: 100%;
+      width: 2px;
+      background-color: $white;
+      margin: 0 10px;
+      position: relative;
+
+      span {
+        position: absolute;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        color: $white;
+        font-size: 24px;
+        bottom: -60px;
+      }
+    }
+
+    #left-line span {
+      right: -20px;
+      bottom: -80px;
+    }
+
+    #right-line span {
+      left: -20px;
+      bottom: -60px;
+    }
+  }
+}

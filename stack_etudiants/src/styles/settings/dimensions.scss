@@ -3,17 +3,29 @@
    ========================================================================== */
 
 // Valeurs utilisées pour les médias query
-$breakpoint-xs: 375px;
-$breakpoint-sm: 768px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1440px;
-$breakpoint-xl: 1920px;
 $breakpoint-mdplus: 1024px;
 
 :root {
+    // Spacing
     --spacing-xs: 5px;
     --spacing-sm: 15px;
     --spacing-md: 30px;
     --spacing-lg: 50px;
     --spacing-xl: 100px;
-}
+  
+    // Icon Sizes
+    --icon-size: 58px;
+    --icon-size-xs: 0.75em;
+    --icon-size-sm: 0.8em;
+    --icon-size-md: 1.25em;
+    --icon-size-lg: 1.75em;
+    --icon-size-xl: 7em;
+  }
+
+// Breakpoints
+$breakpoint-xs: 375px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1440px;
+$breakpoint-xl: 1920px;
+
